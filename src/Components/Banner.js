@@ -6,7 +6,7 @@ const images = {
   img3: "https://rukminim1.flixcart.com/fk-p-flap/1688/280/image/a44ac279b28e042e.jpg?q=50",
 };
 
-function Banner() {
+function Banner({center}) {
 
   
   
@@ -15,7 +15,7 @@ function Banner() {
   return (
     <>
       <div>
-        <div className="w-full h-[250px] shadow-lg flex overflow-x-scroll scrollbar-hide snap-x items-center">
+        <div className={`w-full h-[250px] shadow-lg flex overflow-x-scroll scrollbar-hide snap-x items-center ${center && 'justify-center my-3'}`}>
           <img src={images.img1} className="w-full h-full snap-x object-cover" />
           <img src={images.img2} className={`w-full h-full snap-x object-cover`} />
           <img src={images.img3} className="w-full h-full snap-x object-cover" />
