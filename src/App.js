@@ -5,6 +5,8 @@ import Header from "./Components/Header";
 import Nav from "./Components/Nav";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./Components/Sidebar";
+import Item from "./Components/Item";
+import Product from "./Components/Product";
 
 function App() {
   return (
@@ -39,6 +41,15 @@ function App() {
             element={
               <>
                 <h1>Error</h1>
+              </>
+            }
+          />
+
+          <Route
+            path="/products/:id"
+            element={
+              <>
+                <Product />
               </>
             }
           />
