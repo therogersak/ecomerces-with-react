@@ -8,3 +8,8 @@ html{
     font-family: Lato;
     font-weight: 500;
 }
+
+.Alert{
+    background: none;
+    color: black;
+}

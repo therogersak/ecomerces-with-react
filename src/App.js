@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./Components/Sidebar";
 import Item from "./Components/Item";
 import Product from "./Components/Product";
+import Cart from "./Components/Cart";
 
 function App() {
   return (
@@ -37,10 +38,10 @@ function App() {
           />
 
           <Route
-            path="*"
+            path="/cart"
             element={
               <>
-                <h1>Error</h1>
+                <Cart />
               </>
             }
           />
