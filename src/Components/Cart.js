@@ -33,7 +33,12 @@ function Cart() {
               </div>
               <h3 className="text-[17px] font-bold">Your cart is empty!</h3>
               <span className="text-sm pb-4">Add Itmes to it Now</span>
-              <button onClick={() => {navigate('/')}} className="bg-blue-500  p-2 px-10 rounded-sm shadow-2xl text-white">
+              <button
+                onClick={() => {
+                  navigate("/");
+                }}
+                className="bg-blue-500  p-2 px-10 rounded-sm shadow-2xl text-white"
+              >
                 Shop Now
               </button>
             </div>
@@ -59,7 +64,7 @@ function Cart() {
                             <span className="text-gray-500 line-through text-sm">
                               ${cart?.price - 10}
                             </span>
-                            <span>${cart?.price}</span>
+                            <span className="pl-2">${cart?.price}</span>
                           </div>
                           <div className="flex items-center space-x-4">
                             <button className="text-[17px] hover:text-blue-600 transition-all duration-200">
@@ -88,6 +93,32 @@ function Cart() {
             <div className="bg-white  border w-full h-[100px] lg:w-[700px] lg:h-[300px] mb-3 lg:mb-0 ">
               <div className="border-b w-full font-bold text-gray-500 p-3">
                 Price Details
+              </div>
+              <div className="flex items-center justify-between p-4">
+                <h3>Price (Item: {cart.length})</h3>
+                <h3>
+                  $
+                  {cart?.reduce(
+                    (initial, current) => initial.price + current.price
+                  )}
+                </h3>
+              </div>
+
+              <div className="flex items-center border-b justify-between p-4">
+                <h3>Discount :</h3>
+                <h3>
+                  $
+                  {cart?.reduce(
+                    (initial, current) => initial.price - current.price
+                  )}
+                </h3>
+              </div>
+              <div className="flex items-center justify-between p-3">
+                <h1 className="font-bold text-[18px]">SubTotal :</h1>
+                <h1 className="font-bold text-[18px]"> $
+                  {cart?.reduce(
+                    (initial, current) => initial.price + current.price
+                  )}</h1>
               </div>
             </div>
           </div>
