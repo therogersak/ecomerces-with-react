@@ -3,15 +3,16 @@ import { StarIcon, HeartIcon } from "@heroicons/react/outline";
 import { HeartIcon as HeartFill } from "@heroicons/react/solid";
 import { useDispatch, useSelector } from "react-redux";
 import { like } from "../features/likeSlice";
-import { Link } from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 function Item({ count, imgURL, title, rate, price, id }) {
   const dispatch = useDispatch();
   const value = false;
+  
 
   return (
     <>
       <div className="relative select-none" key={id}>
-        <Link to={`/products/${id}`}>
+        <Link to={`/products/${id}`} onClick={(e) => {window.scrollTo(0,0)}}>
           <div className="space-y-3 m-2">
             <div className="w-[200px] h-[200px] mx-auto">
               <img

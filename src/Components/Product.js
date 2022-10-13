@@ -31,13 +31,13 @@ function Product() {
 
   const cartHandler = () => {
     dispatch(
-      addCart({
+      addCart([{
         id: id,
         title: product?.title,
         img: product?.imgUrl,
         price: product?.price,
         brand: product?.brand,
-      })
+      }])
     );
     setOpen(true)
   };

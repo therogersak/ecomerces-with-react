@@ -15,10 +15,10 @@ function Banner({center}) {
   return (
     <>
       <div>
-        <div className={`w-full h-[250px] shadow-lg flex overflow-x-scroll scrollbar-hide snap-x items-center ${center && 'justify-center my-3'}`}>
-          <img src={images.img1} className="w-full h-full snap-x object-cover" />
-          <img src={images.img2} className={`w-full h-full snap-x object-cover`} />
-          <img src={images.img3} className="w-full h-full snap-x object-cover" />
+        <div className={`w-full h-[250px] shadow-lg flex overflow-x-scroll scrollbar-hide snap-x snap-mandatory items-center ${center && 'justify-center my-3'}`}>
+          <img src={images.img1} className="w-full h-full snap-x object-cover snap-center" />
+          <img src={images.img2} className={`w-full h-full snap-center  object-cover`} />
+          <img src={images.img3} className="w-full h-full snap-x object-cover snap-center" />
         </div>
       </div>
     </>
